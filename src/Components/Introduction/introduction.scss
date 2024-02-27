@@ -1,0 +1,279 @@
+:root{
+   --PrimaryColor: hsl(199, 100%, 33%);
+   --SecondaryColor: hsl(187, 85%, 43%);
+   --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%),hsl(199, 43%, 33%));
+   --whiteColor: hsl(0, 0%, 100%);
+   --blackColor: hsl(201, 33%, 16%);
+   --textColor: hsl(240, 4%, 36%);
+   --whiteColorDeam: hsl(0, 0%, 93%);
+   --greyText: rgb(190, 190, 190);
+   --inputColor: rgb(239, 239, 239);
+   --bodyColor: rgb(200, 240, 246);
+   --cardBG: rgb(225, 225, 235);
+}
+
+.home{
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: auto;
+   overflow: hidden;
+   
+
+   .overlay{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+       background: rgba(0, 20, 70, 0.7);
+      top: 0;
+      bottom: 10;
+      z-index: 1;
+      mix-blend-mode: hard-light;
+   }
+
+
+ video{
+   position: absolute;
+   height: 100%;
+   width: 100%;
+
+   object-fit: cover;
+   z-index: 0;
+ }  
+
+ .homeContent{
+   position: absolute;
+   top: 60%;
+   width: 50%;
+   right: 0;
+   transform: translate(-50%, -50%);
+   height: max-content;
+   padding: 0rem 0rem 7rem;
+   display: flex;
+   row-gap: 3rem;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin: 40px;
+   color: hsl(90, 79%, 50%);
+   z-index: 100;
+
+
+   .textDiv{
+      padding-left: 5rem;
+      margin-top: 10px;
+      bottom: 20;
+
+
+
+      .smallText{
+         font-size: 13px;
+         text-transform: uppercase;
+      }
+
+      .homeTitle{
+         position: relative;
+         font-size: 1.8re;
+         color: rgb(0,0,0);
+
+      }
+   }
+
+   .cardDiv{
+      position: relative;
+      padding: 2rem;
+      background:  hsl(0, 0%, 100%);
+      border-radius: 10px;
+
+
+
+      label{
+         display: flex;
+         color: hsl(240, 4%, 36%);
+         padding-bottom: 10px;
+         padding-left: 10px;
+         font-size: 10px;
+         margin: 0;
+         text-align: center;
+      }
+
+      .label_total{
+         align-items: center;
+
+
+         .total{
+            color: hsl(240, 4%, 36%);
+            font-size: 20px;
+            padding-bottom: 15px;
+         }
+      }
+      
+      .caption{
+          color: hsl(199, 00%, 33%);
+          font-size: 15px;
+          padding-left: 20px;
+          padding-right: 5px;
+      }
+
+      .input{
+         height: 90px;
+         padding: 0 1rem;
+         background: rgb(239, 239, 239);
+         border-radius: 3rem;
+         padding-left: 100px;
+
+         input{
+            background: none;
+            border: none;
+            outline: none;
+            font-size: 13px;
+            &::placeholder{
+               font-size: 13px;              
+            }
+         }
+        .icon{
+         font-size: 10px;
+         color: hsl(199, 100%, 33%);
+         margin-left: 10px;
+        }
+
+        .input[type=range]{
+         background: blue;
+
+        }
+      }
+
+      .searchOptions{
+         position: absolute;
+         background: linear-gradient(to right, hsl(187, 85%, 43%),hsl(199, 43%, 33%));
+         width: max-content;
+         bottom: -0.7rem;
+         column-gap: .8rem;
+         padding: 5px 1rem;
+         border-radius: 3rem;
+         left: 50%;
+         transform:  translate(-50%);
+         justify-content: center;
+         cursor: pointer;
+
+          &:hover{    
+             background: hsl(199, 100%, 33%);
+          }      
+       .icon{
+         font-size: 10px;
+       }
+
+       .span{
+         font-size: 13px;
+       }
+
+       }
+   }
+
+   .homeFooterIcons{
+     width: 100%;
+     position: relative;
+     justify-content: space-between;
+    
+
+      .icon{
+         font-size: 30px;
+         color: hsl(90, 0%, 50%);
+         font-weight: 600;
+
+         
+         &:hover{
+            color: hsl(199, 100%, 33%);
+         }
+      }
+
+   }
+ }
+}
+
+
+
+@media screen and (min-width: 500px){
+   .home{
+      .homeContent{
+         .textDiv{
+
+            .smallText{
+               font-size: 10px;
+            }
+
+            .homeTitle{
+               position: relative;
+               font-size: 2.3rem;
+               width: max-content;
+            }
+         }
+
+         .cardDiv{
+           // grid-template-columns: repeat(2, 1fr);
+         }
+      }
+   }
+}
+
+
+@media screen and (min-width: 660px){
+   .home{
+      .homeContent{
+         .cardDiv{
+            padding: 2rem 1rem;
+            // grid-template-columns: repeat(3, 1fr);
+
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 940px){
+   .home{
+      height: 70vh;
+   }
+}
+
+@media screen and (min-width: 840px){
+   .home{
+      height: 80vh;
+
+      .homeContent{
+         padding-left: 0;
+         padding-right: 0;
+
+
+         .cardDiv{
+            padding: 3rem 1rem;
+            // grid-template-columns: repeat(3, 1fr);
+         }
+      }
+   }
+}
+
+
+
+
+@media screen and (min-width: 1000px){
+   .home{
+      height: 80vh;
+
+      .homeContent{
+         padding-left: 0;
+         padding-right: 0;
+
+
+         .cardDiv{
+            padding: 3rem 1rem;
+            // grid-template-columns: repeat(3, 1fr);
+         }
+      }
+   }
+}
+
+
+

@@ -1,0 +1,184 @@
+:root{
+   --PrimaryColor: hsl(199, 100%, 33%);
+   --SecondaryColor: hsl(187, 85%, 43%);
+   --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%),hsl(199, 43%, 33%));
+   --whiteColor: hsl(0, 0%, 100%);
+   --blackColor: hsl(201, 33%, 16%);
+   --textColor: hsl(240, 4%, 36%);
+   --whiteColorDeam: hsl(0, 0%, 93%);
+   --greyText: rgb(190, 190, 190);
+   --inputColor: rgb(239, 239, 239);
+   --bodyColor: rgb(200, 240, 246);
+   --cardBG: rgb(225, 225, 235);
+}
+
+
+.main{
+   width: 50%;
+   padding-left: 300px;
+   padding-top: 30px;
+   padding-bottom: 50px;
+   background: var(--whiteColor);
+   
+   
+
+
+   .secTitle{
+      .title{
+         position: relative;
+         width: max-content;
+         color: hsl(240, 4%, 36%);
+         margin: 1rem 0;
+         z-index: 0;
+
+         &::after{
+            position: absolute;
+            content: '';
+            background: hsl(187, 85%, 53%);
+            height: 5px;
+            width: 120px;
+            right: 0;
+            bottom: -3px;
+            z-index: -1;
+         }
+      }
+   }
+
+   .secContent{
+      justify-content: center;
+ 
+
+      .singleDestination{
+         height: 100%;
+         display: grid;
+         row-gap: 10px;
+         padding: 1rem;
+         border-radius: 10px;
+         align-items: center;
+         background: rgb(225, 225, 235);
+         box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
+         overflow: hidden;
+
+         &:hover{
+            background: rgb(205, 225, 235);
+            box-shadow: 1 4px 4px rgba(255, 85, 141, 0.549);
+            transition: .3s ease;
+         }
+
+
+         .imageDiv{
+            height: 180px;
+            width: 100%;
+            overflow: hidden;
+
+
+            img{
+               height: 100%;
+               width: 100%;
+               object-fit: cover;
+               transition: 2s ease;
+            }
+
+            &:hover{
+               img{
+               transform: scale(0.9); 
+                   }
+            }
+         }
+            .cardInfo{
+               padding: 1rem;
+               justify-content: space-between;
+               padding-bottom: 1px;
+
+               .destTitle{
+                  color: hsl(201, 33%, 16%);
+                  font-size: 1.25rem;
+               } 
+
+               .continent{
+                  gap: .5rem;
+
+                  .icon{
+                     color: hsl(240, 4%, 36%);
+                     font-size: 10px;
+                  }
+
+
+                  .name{
+                     color: hsl(240, 4%, 36%);
+                     font-weight: 400;
+                     font-size: 14px;
+                  }
+
+               }
+              .fees{
+               width: 100%;
+               justify-content: space-between;
+               padding: 1rem;
+               margin: 0rem;
+               border-top: 1.5px solid rgb(190, 190, 190);
+               border-bottom: 1.5px solid rgb(190, 190, 190);
+                  
+                  .grade{
+                     color: hsl(240, 4%, 36%);
+                     max-width: 100px;
+                     line-height: 20px;
+                     display: flex;
+                     align-item: center;
+                     justify-content: center;
+
+
+                     small{
+                        text-align: center;
+                        background: linear-gradient(to right, hsl(187, 85%, 43%),hsl(199, 43%, 33%));
+                        border-radius: 1rem;
+                        color: white;
+                        padding: 1px 10px; 
+                        font-size: 10px;
+                     }
+                  }
+
+                  .price{
+                     font-size: 2rem;
+                     color: hsl(201, 33%, 16%);
+                  }
+              }
+                 .desc{
+                  font-size: 13.5px;
+                  color: hsl(240, 4%, 36%);
+                  font-weight: 500;
+                 }
+
+                 .btn{
+                  margin-top: 1rem;
+                  color: white;
+                  font-weight: 600;
+                  justify-content: space-between;
+                  gap: .3rem;
+
+
+                  .icon{
+                     align-self: center;
+                     font-size: 15px;
+
+                  }
+
+                 }
+
+            }
+      }
+
+
+   }
+}
+
+
+@media screen and (min-width: 500px){
+   .title{
+      font-size: 1.5rem;
+      &::after{
+         width: 155px !important;
+
+      }
+   }
+}
